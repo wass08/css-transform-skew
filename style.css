@@ -1,0 +1,91 @@
+* {
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  color:white;
+}
+
+body {
+  display:flex;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  padding:24px;
+}
+
+h1, p {
+  margin-bottom: 24px;
+}
+
+
+
+.button {
+  background:transparent;
+  padding:12px 24px;
+  border:solid 2px white;
+  display:inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all .4s;
+}
+
+.button:before {
+  content:'';
+  position:absolute;
+  z-index: -1;
+  background:white;
+  left:-12px;
+  top:-12px;
+  width:0%;
+  height:calc(100% + 24px);
+  transition: all .4s;
+  transform: skew(24deg);
+}
+
+.button:hover:before {
+  width:calc(100% + 24px);
+}
+
+
+.button:hover {
+  cursor:pointer;
+  color:black;
+}
+
+.skewed {
+  position: relative;
+  display: inline-block;
+}
+
+.skewed:before {
+  content:'';
+  background:rgba(255,255,255,0.5);
+  position:absolute;
+  z-index: -1;
+  left:-6px;
+  top:-6px;
+  width:calc(100% + 12px);
+  height:calc(100% + 12px);
+  display:inline-block;
+  transform:skew(-24deg);
+  transition:all .4s;
+}
+
+.skewed:hover {
+  cursor:pointer;
+}
+
+.skewed:hover:before {
+  background:rgba(255, 69, 0, 0.9);
+  transform:skew(12deg);
+}
